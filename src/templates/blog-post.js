@@ -4,11 +4,19 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Intro from "../components/intro"
+import Cover from "../components/cover"
+import Box from "../components/box"
+import Img from "gatsby-image"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+
+  const getRolesCaption = (roles) => {
+    return roles.join("    •    ")
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -21,20 +29,61 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
+        <div className="post-intro">
+          <Box level={2}>
+            <Intro>
+              {post.frontmatter.intro}
+            </Intro>
+          </Box>
+        </div>
+
+        <div className="post-cover">
+          <Box level={1}>
+            <div className="cover-box">
+                <Img fluid={post.frontmatter.coverImage.childImageSharp.fluid}/>
+            </div>            
+          </Box>
+          <div className="cover-details">
+            <Box level={2}>
+              <div className="cover-details-inner">
+                <div className="myrole">
+                  My role
+                </div>
+                <div className="roles">
+                  <pre>{getRolesCaption(post.frontmatter.roles)}</pre>
+                </div>
+              </div>
+            </Box>
+          </div>
+        </div>
+
+        <div>
+          <Box level={1}>
+            <section
+              dangerouslySetInnerHTML={{ __html: post.html }}
+              itemProp="articleBody"
+              className="post-body"
+            />
+          </Box>
+        </div>
+
+
+
+
+        
+
+        {false && <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-        </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-        <hr />
+        </header>}
+
+        {false && 
         <footer>
           <Bio />
         </footer>
+        }
       </article>
-      <nav className="blog-post-nav">
+      {false && <nav className="blog-post-nav">
         <ul
           style={{
             display: `flex`,
@@ -59,7 +108,7 @@ const BlogPostTemplate = ({ data, location }) => {
             )}
           </li>
         </ul>
-      </nav>
+      </nav>}
     </Layout>
   )
 }
@@ -85,6 +134,15 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        intro
+        roles
+        coverImage {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

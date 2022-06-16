@@ -31,8 +31,13 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio">
-      <StaticImage
+    <div className="intro-box">
+      <span> 
+        Hey there! I’m Noa, a product designer with 17 years experience sketching, 
+        building and coaching. I love fun UI, collaboration and making helpful products 
+        that connect people.
+      </span>
+      {false && <StaticImage
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
@@ -41,16 +46,7 @@ const Bio = () => {
         height={50}
         quality={95}
         alt="Profile picture"
-      />
-      {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
-        </p>
-      )}
+      />}
     </div>
   )
 }
