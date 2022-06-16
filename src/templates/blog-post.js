@@ -30,7 +30,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <div className="post-intro">
-          <Box level={2}>
+          <Box level={1}>
             <Intro>
               {post.frontmatter.intro}
             </Intro>
@@ -38,13 +38,13 @@ const BlogPostTemplate = ({ data, location }) => {
         </div>
 
         <div className="post-cover">
-          <Box level={1}>
+          <Box level={0}>
             <div className="cover-box">
                 <Img fluid={post.frontmatter.coverImage.childImageSharp.fluid}/>
             </div>            
           </Box>
           <div className="cover-details">
-            <Box level={2}>
+            <Box level={1}>
               <div className="cover-details-inner">
                 <div className="myrole">
                   My role
@@ -58,7 +58,7 @@ const BlogPostTemplate = ({ data, location }) => {
         </div>
 
         <div>
-          <Box level={1}>
+          <Box level={0}>
             <section
               dangerouslySetInnerHTML={{ __html: post.html }}
               itemProp="articleBody"

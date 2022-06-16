@@ -15,7 +15,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <div className="about-me">
-        <Box level={2}>
+        <Box level={1}>
           <Intro>
             Hey there! I’m Noa, a product designer with 17 years experience sketching, building and coaching. 
             I love fun UI, collaboration and making helpful products that connect people.
@@ -23,7 +23,7 @@ const BlogIndex = ({ data, location }) => {
         </Box>
       </div>
       <div className="posts-list-panel">
-        <Box level={1}>
+        <Box level={0}>
           <ol style={{ listStyle: `none` }} className="posts-list">
             {posts.map(post => {
               const title = post.frontmatter.title || post.fields.slug

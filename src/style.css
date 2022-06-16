@@ -13,7 +13,7 @@
   --maxWidth-4xl: 56rem;
   --maxWidth-5xl: 72rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-5xl);
+  --maxWidth-wrapper: var(--maxWidth-2xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -67,6 +67,12 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+
+  /* VERY IMPORTANT */
+  --widthLevel0: var(--maxWidth-4xl);
+  --widthLevel1: var(--maxWidth-2xl);
+  --widthLevel2: var(--maxWidth-lg);
+
 }
 
 /* HTML elements */
@@ -328,14 +334,19 @@ a:focus {
 
 /* Custom */
 
+.boxlevel0 {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-4xl);
+}
+
 .boxlevel1 {
   margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
+  max-width: var(--widthLevel1);
 }
 
 .boxlevel2 {
   margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-4xl);
+  max-width: var(--maxWidth-lg);
 }
 
 .about-me {
@@ -392,6 +403,7 @@ a:focus {
 
 .post-cover {
   background-color: #b0dfcd;
+  margin-bottom: var(--spacing-36);
 }
 
 .cover-details {
@@ -419,7 +431,7 @@ a:focus {
 
 .post-body .section {
   margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-4xl);
+  max-width: var(--widthLevel1);
   font-family: var(--fontFamily-sans);
 }
 
@@ -433,6 +445,11 @@ a:focus {
   font-size: var(--fontSize-2);
   font-family: var(--fontFamily-sans);
   font-weight: 600;
+  margin-top: 0px;
+}
+
+.post-body .section p {
+  margin-bottom: var(--spacing-24);
 }
 
 pre {

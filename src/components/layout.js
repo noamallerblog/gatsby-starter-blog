@@ -6,7 +6,7 @@ const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header = (
-    <Box level={1}>
+    <Box level={0}>
       <div className="topbar">
         <div className="logo-box">
           <Link to="/">Noa Maller</Link>
