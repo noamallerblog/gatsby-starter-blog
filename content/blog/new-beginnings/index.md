@@ -6,7 +6,7 @@ roles:
   - UX designer
   - UX researcher
   - Visual designer
-coverImage: "./1.jpg"
+coverImage: ./1.jpg
 ---
 
 <div class="section">
