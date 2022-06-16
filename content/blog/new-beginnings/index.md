@@ -20,8 +20,20 @@ coverImage: ./1.jpg
   ### The Problem
   Parents are struggling in finding content-appropriate books for their children. This is because bookstore apps often do not offer enough children-oriented information about the books they sell.
 
-
 </div>
 
-
 ## 01  |  Emphasize Phase
+
+<div class="section">
+
+  ### Interviews
+
+  I have performed interviews with the potential target audiences. We have discussed the various aspects of finding and buying children's books, guided by the following questions:
+  1. Please describe the way you search and buy a book
+  2. What are the reasons you buy a children's book?
+  3. What leads you in choosing a book?
+  4. What difficulties did you encounter while searching for a book to buy
+  5. What would you improve in the experience of searching and buying books?
+
+
+</div>
