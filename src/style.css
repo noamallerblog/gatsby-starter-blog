@@ -72,6 +72,9 @@
   --widthLevel0: var(--maxWidth-4xl);
   --widthLevel1: var(--maxWidth-2xl);
   --widthLevel2: var(--maxWidth-lg);
+
+  --widthLevel0TABLET: 722px;
+  --widthLevel1TABLET: 530px;
   
   --coverboxwidth: 1350px;
   --coverboxheight: 564px;
@@ -513,10 +516,10 @@ pre {
     height: 143px;
   }
   .boxlevel0 {
-    max-width: 722px;
+    max-width: var(--widthLevel0TABLET);
   }
   .boxlevel1 {
-    max-width: 492px;
+    max-width: var(--widthLevel1TABLET);
   }
   .intro-box span {
     font-size: var(--fontSize-4);
@@ -527,6 +530,9 @@ pre {
   .global-header {
     margin-bottom: var(--spacing-24);
     margin-top: var(--spacing-24);
+  }
+  .post-body .section {
+    max-width: var(--widthLevel1TABLET);
   }
 }
 
