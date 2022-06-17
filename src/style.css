@@ -453,15 +453,18 @@ a:focus {
   margin-left: 17px;
 }
 
+.post-body .photo {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--spacing-24);
+}
+
 
 pre {
   font-family: inherit;
 }
 
-.photo {
-  border: 1px solid red;
-  width: 500px;
-}
 
 .post-details-bar-inner {
   margin-right: var(--page-margin);

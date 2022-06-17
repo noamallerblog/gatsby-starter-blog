@@ -35,5 +35,14 @@ coverImage: ./1.jpg
   4. What difficulties did you encounter while searching for a book to buy
   5. What would you improve in the experience of searching and buying books?
 
+  ### Empathy maps
 
+  Next, I used empathy maps as a tool to emphasize with the users farthermore, and to identify the users needs.
+  In Adam's Empathy Map I have broken down all the important needs and points that came up from the interview with him and that the app can address.
+
+  <div class="photo">
+
+  ![alt text](./2.jpg)
+
+  </div>
 </div>
