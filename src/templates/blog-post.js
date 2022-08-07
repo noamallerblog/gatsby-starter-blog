@@ -25,7 +25,7 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className="blog-post"
+        className="post"
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -57,14 +57,11 @@ const BlogPostTemplate = ({ data, location }) => {
           </div>
         </div>
 
-        <div>
-          <Box level={0}>
-            <section
-              dangerouslySetInnerHTML={{ __html: post.html }}
-              itemProp="articleBody"
-              className="post-body"
-            />
-          </Box>
+        <div className="body">
+          <section
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            itemProp="articleBody"
+          />
         </div>
 
 

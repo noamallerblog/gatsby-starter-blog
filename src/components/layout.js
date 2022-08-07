@@ -7,12 +7,14 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
   let header = (
     <Box level={0}>
-      <div className="topbar">
-        <div className="logo-box">
-          <Link to="/">Noa Maller</Link>
-        </div>
-        <div className="nav-panel">
-        
+      <div class="section-wider">
+        <div className="topbar">
+          <div className="logo-box">
+            <Link to="/">Noa Maller</Link>
+          </div>
+          <div className="nav-panel">
+          
+          </div>
         </div>
       </div>
     </Box>
